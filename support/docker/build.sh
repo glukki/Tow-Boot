@@ -74,7 +74,7 @@ if [ -e /Tow-Boot ]; then
 		cp -r "$target" "$proxy_dir/$f"
 		chmod -R u+w "$proxy_dir/$f"
 
-		cp -r "$proxy_dir/$f" "$current_dir/$f"
+		mv "$proxy_dir/$f" "$current_dir/$f"
 		chown -R "$REAL_UID:$REAL_GID" "$current_dir/$f"
 	done
 else
